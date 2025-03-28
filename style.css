@@ -1,6 +1,4 @@
-<style>
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
-</style>
 
 
 *,
@@ -12,103 +10,329 @@
 }
 
 :root {
-    sidebarColor: --white;
+    --subtleColor: #ebe8f4;
+    --lightestColor: #ffffff;
+    --highlightColor: rgb(107, 38, 255);
+    --darkColor: #1f1f1f;
 }
 
 body{
     display: grid;
     font-family: "Source Sans 3", sans-serif;
-    grid-template-columns: 1fr 3fr;
+    font-size: 16px;
+    grid-template-columns: 220px 1fr;
+    padding: 0;
+    margin: 0;
 }
 
 .sidebar {
-    background-color: var(--sidebarColor);
+    background-color: var(--darkColor);
+    color: var(--subtleColor);
+    padding: 20px;
+    margin: 0;
+    height: 100vh;
+    grid-row: 1/3;
+    max-width: 220px;
+}
 
-
+.logo > h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    margin-bottom: 40px;;
 }
 
 ul {
     list-style-type: none;
+    
+}
+ul li {
+    margin-bottom: 8px;
 }
 
+
+ul li:hover {
+    color:  rgb(103, 93, 254);
+    font-weight: 500;
+    cursor: pointer;
+}
+
+
+.nav1 {
+    margin-bottom: 100px;;
+}
 .header{
     display: grid;
-    grid-template-rows: 1fr 1fr;
-    background-color:rgb(203, 203, 225);
+    background-color: var(--subtleColor);
+    color: var(--darkColor);
+    grid-auto-flow: row;
+    padding-top: 20px;
+    height: fit-content;
 
 }
 
 .header-upper {
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap:50px;
-    justify-content: space-between;
-    
+    grid-template-columns: repeat(auto-fit, minmax(425px, .5fr));
+    align-items: center;
+    padding: 0 50px 0 50px;
+    grid-auto-flow: row;
+    margin-bottom: 15px;
+    gap:10px;
 }
 
 .header-lower {
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap:50px;
+    grid-template-columns: repeat(auto-fit, minmax(425px, .5fr));
+    justify-content: space-between;
+    gap:15px;
+    align-items: center;
+    padding: 0 50px 30px 50px;
+    
 }
 
-.left {
+.left-upper {
+    display: grid;
+        
+}
+
+.left-upper button {
+    align-self: center;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-radius: 20px;
+    border: none;
+    background-color: #f5f4f9;
+    min-height: 30px;
+  
+}
+
+.left-upper button i {
+    color:#5d5b5b;
+    font-size: 1.3rem;
+    margin-right:10px;
+}
+
+input {
+    max-width: 92%;
+    border: none;
+    background-color: transparent;
+
+}
+
+.left-lower {
     display: grid;
     grid-template-columns: 1fr 3fr;
     align-items: center;
+    width: 450px;
 
 }
 
 .header-upper .right {
-    display: grid;
-    grid-template-columns: 1fr 1fr 2fr;
-    gap:20px;
-    padding: 20px;
+    margin-top: 0;
+    display: flex;
     align-items: center;
+    justify-content: flex-end;
+    gap:10px;
+
 }
 
 
 .header-lower .right {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap:20px;
-    padding: 20px;
+    grid-template-columns: repeat(3, 110px);
     align-items: center;
+    justify-content: flex-end;
+    gap:10px;
+
 }
 
-input {
-    border: none;
-    background-color: lightgray;
-    height: 25px;
-    border-radius: 15px;
+.right i {
+    color: rgba(107, 38, 255, .6);
+    font-size: 1.3rem;
 }
-
-
 .right .profile-img {
-    margin: auto;
-    width: 60px;
-    height: 60px;
+    margin: 0;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
-    background: url(https://media.istockphoto.com/id/1317804578/photo/one-businesswoman-headshot-smiling-at-the-camera.jpg?s=612x612&w=0&k=20&c=EqR2Lffp4tkIYzpqYh8aYIPRr-gmZliRHRxcQC5yylY= ) no-repeat;
+    background: -webkit-linear-gradient(rgba(29, 38, 113, 0.2), rgba(195, 55, 100, 0.2)),  url(https://media.istockphoto.com/id/1317804578/photo/one-businesswoman-headshot-smiling-at-the-camera.jpg?s=612x612&w=0&k=20&c=EqR2Lffp4tkIYzpqYh8aYIPRr-gmZliRHRxcQC5yylY= ) no-repeat;
         background-size: cover;
 }
-.left .profile-img {
-    margin: auto;
-    width: 130px;
-    height: 130px;
+.left-lower .profile-img {
+    margin: 0;
+    margin-right: 10px;;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
-    background: url(https://media.istockphoto.com/id/1317804578/photo/one-businesswoman-headshot-smiling-at-the-camera.jpg?s=612x612&w=0&k=20&c=EqR2Lffp4tkIYzpqYh8aYIPRr-gmZliRHRxcQC5yylY= ) no-repeat;
-        background-size: cover;
+    background: -webkit-linear-gradient(rgba(29, 38, 113, 0.2), rgba(195, 55, 100, 0.2)), url(https://media.istockphoto.com/id/1317804578/photo/one-businesswoman-headshot-smiling-at-the-camera.jpg?s=612x612&w=0&k=20&c=EqR2Lffp4tkIYzpqYh8aYIPRr-gmZliRHRxcQC5yylY= ) no-repeat;
+    background-size: cover;
 }
 
 
 .right .btn {
     border: none;
-    background-color: rgb(82, 92, 136);
+    background-color: var(--highlightColor);
+    color: var(--subtleColor);
     height: 40px;
+    border-radius: 20px;
+    min-width: 70px;
+    max-width: 110px;
+}
 
+.content {
+    grid-row:2/3;
+    grid-column: 2;
+    display: grid;
+    grid-template-columns: repeat(auto-fit);    
+    padding: 0 50px 50px 50px;
+    grid-auto-flow: row;
+    margin-top: 20px;
+
+}
+
+
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, .5fr));    
+    grid-auto-flow: row;
+    margin-right: 50px;
+        
+}
+.proj-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 25px;
+    margin: 0 20px 20px 0;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px #e1e1e1;
+    height: 250px0px;
+    color:#5d5b5b;
+
+
+
+}
+
+.proj-box>div:first-of-type {
+    align-self: top;
+}
+
+.content h2 {
+    margin:0;
+    max-height: 30px;
+    align-self: center;
+    margin-bottom: 20px;
+}
+
+
+.proj-box .material-icons {
+    color:#5d5b5b;
+    font-size: 1.3rem;
+}
+
+
+.proj-box .proj-icons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+    align-self: self-end;
+}
+
+
+.content-right-sidebar {
+    grid-column: 2;
+    max-width: fit-content;
+}
+
+
+.trending-profile {
+    display: grid;
+    margin-bottom: 15px;
+    align-items: center;
+    justify-content: left;
+}
+
+
+.trending-profile> div:first-of-type  {
+    grid-column: 1;
+    margin: 0;
+    margin-right: 10px;;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    margin-right:15px;
+
+  }
+
+#trending-profile-img-1 {
+    background: -webkit-linear-gradient(rgba(29, 38, 113, 0.2), rgba(195, 55, 100, 0.2)), url(https://media.istockphoto.com/id/1437816897/photo/business-woman-manager-or-human-resources-portrait-for-career-success-company-we-are-hiring.jpg?b=1&s=612x612&w=0&k=20&c=hEPh7-WEAqHTHdQtPrfEN9-yYCiPGKvD32VZ5lcL6SU= ) no-repeat;
+    background-size: cover;
+}
+
+
+#trending-profile-img-2 {
+    background: -webkit-linear-gradient(rgba(29, 38, 113, 0.2), rgba(195, 55, 100, 0.2)), url(https://t4.ftcdn.net/jpg/03/64/21/11/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg ) no-repeat;
+    background-size: cover;
+} 
+
+#trending-profile-img-3 {
+    background: -webkit-linear-gradient(rgba(29, 38, 113, 0.2), rgba(195, 55, 100, 0.2)), url(https://t3.ftcdn.net/jpg/06/11/89/50/360_F_611895025_3sEm547mzOF1IKMBAVa4fJ7Ifq4z8Eye.jpg) no-repeat;
+    background-size: cover;
+} 
+
+#trending-profile-img-4 {
+    background: -webkit-linear-gradient(rgba(29, 38, 113, 0.2), rgba(195, 55, 100, 0.2)), url(https://t4.ftcdn.net/jpg/06/21/02/63/360_F_621026371_kR2ygyHN4o7NTQXxEpP4KJm9NxRt5Ypz.jpg ) no-repeat;
+    background-size: cover;
+} 
+
+
+.trending-profile >div:last-of-type {
+    grid-column: 2;
+}
+
+.announcements {
+        margin-right: 20px;;
+}
+
+.trending {
+        margin-right: 20px;
+}
+
+.trending .profile-name {
+        font-weight: 700;
+}
+
+
+
+.announcements > div {
+    border-bottom: 1px solid #e1e1e1;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #5d5b5b;
+    padding: 10px 0 10px 0;
+}
+
+.profile-name ~ p {
+    color:#5d5b5b;
+}
+
+
+.profile-img ~div>p{
+    font-weight: 700;
+    font-size: 1.2rem;
+    line-height: 30%;
+}
+
+.content-right-sidebar>h2:last-of-type {
+    margin-top:50px;
 }
